@@ -26,3 +26,6 @@ hs_err_pid*
 JavaStudy/.DS_Store
 JavaStudy/out/.DS_Store
 JavaStudy/out/production/.DS_Store
+.DS_Store
+*.kotlin_module
+*.iml
