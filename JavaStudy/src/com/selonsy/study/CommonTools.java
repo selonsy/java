@@ -1,17 +1,10 @@
-package com.selonsy.demo;
+package com.selonsy.study;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Random;
 
-/**
- * Copyright：Sichen International Co. Ltd.
- *
- * @author selonsy
- * Created on 2019/11/10.
- * Desc : none
- */
 public class CommonTools {
     public static void main(String[] args) {
 //        求绝对值：

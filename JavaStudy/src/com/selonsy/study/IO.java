@@ -1,15 +1,12 @@
-package com.selonsy.demo;
+package com.selonsy.study;
 import java.math.BigDecimal;
 import java.util.Scanner;
 import java.util.Arrays;
+
 /**
- * Copyright：Sichen International Co. Ltd.
- *
- * @author selonsy
- * Created on 2019/11/7.
- * Desc : none
+ * 学习基础的输入输出操作
  */
-public class Hello {
+public class IO {
     public static void main(String[] args){
 //        System.out.println("Hello Selonsy");
 //        int i3 = 2_000_000_000; // 加下划线更容易识别

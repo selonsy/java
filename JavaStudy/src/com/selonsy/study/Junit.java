@@ -1,4 +1,4 @@
-package com.selonsy.learnjava;
+package com.selonsy.study;
 
 /**
  * Copyright：Sichen International Co. Ltd.
@@ -8,7 +8,7 @@ package com.selonsy.learnjava;
  * Created on 2019/11/28.
  * Desc : none
  */
-public class StudyJunit {
+public class Junit {
 
     public static void main(String[] args) {
         System.out.println("Junit Study~");

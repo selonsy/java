@@ -1,4 +1,4 @@
-package com.selonsy.learnjava;
+package com.selonsy.study;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
@@ -18,13 +18,13 @@ import static org.junit.jupiter.api.Assertions.*;
  * Created on 2019/11/28.
  * Desc : none
  */
-class StudyJunitTest {
+class JunitTest {
 
-    StudyJunit studyJunit;
+    Junit junit;
 
     @BeforeEach
     void beforeEach() {
-        studyJunit = new StudyJunit();
+        junit = new Junit();
         System.out.println("在【每个】@Test方法之【前】运行~");
     }
 
@@ -48,7 +48,7 @@ class StudyJunitTest {
     @Test
     void staticAdd() {
         // 静态方法测试
-        assertEquals(5, StudyJunit.staticAdd(2, 3));
+        assertEquals(5, Junit.staticAdd(2, 3));
     }
 
     /**
@@ -63,7 +63,7 @@ class StudyJunitTest {
         // 判断结果是否为False
         assertFalse(3 > 5);
         // 判断结果是否为非Null
-        assertNotNull(new StudyJunit());
+        assertNotNull(new Junit());
         // 判断结果为数组并与期望数组的每个元素的值均相等
         assertArrayEquals(new int[]{1, 2, 3}, new int[]{1, 2, 3});
 
@@ -78,42 +78,42 @@ class StudyJunitTest {
         assertThrows(IllegalArgumentException.class, new Executable() {
             @Override
             public void execute() throws Throwable {
-                int res = studyJunit.divide(5, 0);
+                int res = junit.divide(5, 0);
             }
         });
 
         // 异常测试（函数式编程写法~
         assertThrows(IllegalArgumentException.class, () -> {
-            int res = studyJunit.divide(5, 0);
+            int res = junit.divide(5, 0);
         });
 
     }
 
     @Test
     void add() {
-        assertEquals(5, studyJunit.add(2, 3), "加法有问题"); // message：如果断言失败，给定的错误信息。
+        assertEquals(5, junit.add(2, 3), "加法有问题"); // message：如果断言失败，给定的错误信息。
     }
 
     @Test
     void subtract() {
-        assertEquals(5, studyJunit.subtract(6, 1), "减法有问题");
+        assertEquals(5, junit.subtract(6, 1), "减法有问题");
     }
 
     @Test
     void multiply() {
-        assertEquals(10, studyJunit.multiply(2, 5), "乘法有问题");
+        assertEquals(10, junit.multiply(2, 5), "乘法有问题");
     }
 
     @Test
     void divide() {
-        assertEquals(2, studyJunit.divide(10, 5), "除法有问题");
+        assertEquals(2, junit.divide(10, 5), "除法有问题");
     }
 
     @Disabled
     @Test
     void testDisable() {
         // 条件测试，屏蔽@Disabled标定的函数，使其不执行。
-        assertEquals(5, studyJunit.add(2, 3), "加法有问题"); // message：如果断言失败，给定的错误信息。
+        assertEquals(5, junit.add(2, 3), "加法有问题"); // message：如果断言失败，给定的错误信息。
     }
 
     @Test
@@ -175,7 +175,7 @@ class StudyJunitTest {
     @ParameterizedTest
     @MethodSource
     void testCapitalize_01(String input, String result) {
-        assertEquals(result, StudyJunit.capitalize(input));
+        assertEquals(result, Junit.capitalize(input));
     }
 
     static List<Arguments> testCapitalize_01() {
@@ -189,7 +189,7 @@ class StudyJunitTest {
     @ParameterizedTest
     @CsvSource({"abc, Abc", "APPLE, Apple", "gooD, Good"})
     void testCapitalize_02(String input, String result) {
-        assertEquals(result, StudyJunit.capitalize(input));
+        assertEquals(result, Junit.capitalize(input));
     }
 
     // 当测试数据过多的时候，可以采用引入外部文件的方式
